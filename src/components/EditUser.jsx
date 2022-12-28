@@ -10,7 +10,6 @@ const EditUser = ({userForm, setUserForm, idUser, getAllUsers}) => {
 
     const submit = (data) =>{
         const URL = `https://users-crud.academlo.tech/users/${idUser}/`
-        console.log("Form: ", data)
         axios.patch(URL, data)
             .then(({info}) => {
                 setUserForm(!userForm)
@@ -27,7 +26,6 @@ const EditUser = ({userForm, setUserForm, idUser, getAllUsers}) => {
 
     useEffect(() => {
         if(editUser){
-            console.log(dataForm)
             setValue("first_name", editUser.first_name)
             setValue("last_name", editUser.last_name)
             setValue("email", editUser.email)

@@ -10,14 +10,17 @@ const UsersList = ({users, getAllUsers}) => {
     const [editUser, setEditUser] = useState(false)
     const [delUser, setDelUser] = useState(false)
     const [idUser, setIdUser] = useState()
+    const [nameDelUser, setNameDelUser] = useState()
+
     const updateUser = (id) => {
         setEditUser(!editUser)
         setIdUser(id)
     }
 
-    const deleteUser = (id) => {
+    const deleteUser = (id, fullName) => {
         setDelUser(!delUser)
         setIdUser(id)
+        setNameDelUser(fullName)
     }
 
     return (
@@ -35,7 +38,7 @@ const UsersList = ({users, getAllUsers}) => {
                         </p>
                         <hr />
                         <div className="btns">
-                            <button className="delete" onClick={() => deleteUser(user.id)}><img src={trash}/></button>
+                            <button className="delete" onClick={() => deleteUser(user.id, user.first_name+" " + user.last_name)}><img src={trash}/></button>
                             <button className="update" onClick={() => updateUser(user.id)}><img src={edit}/></button>
                         </div>
                     </div>
@@ -45,7 +48,7 @@ const UsersList = ({users, getAllUsers}) => {
                 editUser&&<EditUser userForm={editUser} setUserForm={setEditUser} idUser={idUser} getAllUsers={getAllUsers}/>      
             }
             {
-                delUser&&<DeleteUser idUser={idUser} delUser={delUser} setDelUser={setDelUser} getAllUsers={getAllUsers}/>
+                delUser&&<DeleteUser idUser={idUser} delUser={delUser} setDelUser={setDelUser} getAllUsers={getAllUsers} nameDelUser={nameDelUser}/>
             }
         </div>
     )

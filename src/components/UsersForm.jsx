@@ -6,7 +6,6 @@ const UsersForm = ({userForm, setUserForm, typeForm, getAllUsers}) => {
 
     const submit = (data) =>{
         const URL = "https://users-crud.academlo.tech/users/"
-        console.log(data)
         axios.post(URL, data)
             .then(({data}) => {
                 setUserForm(!userForm)

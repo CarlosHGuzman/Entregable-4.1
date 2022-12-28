@@ -2,18 +2,14 @@ import { useState, useEffect} from "react"
 import axios from "axios"
 import "./DeleteUser.css"
 
-const DeleteUser = ({idUser, delUser, setDelUser, getAllUsers}) => {
-    const [nameDelUser, setNameDelUser] = useState()
+const DeleteUser = ({idUser, delUser, setDelUser, getAllUsers, nameDelUser}) => {
 
     useEffect(() => {
-        console.log(idUser)
         const URL = `https://users-crud.academlo.tech/users/${idUser}/`
         axios.delete(URL)
-          .then(({data}) => {
-            setNameDelUser(data)
-            getAllUsers()})
+          .then((data) => getAllUsers())
           .catch(error => console.log(error))
-    })
+    }, [])
     
     return (
         <div className="delete-container">
