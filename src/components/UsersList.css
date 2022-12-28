@@ -1,0 +1,71 @@
+.App .body .users-list{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 47px;
+}
+
+.App .body .users-list .user{
+    flex-basis: 350px;
+    border: solid var(--user-border) 1px;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.App .body .users-list .user h3{
+    line-height: var(--title-h3-height);
+    font-size: var(--title-h3-size);
+    color: var(--titles)
+}
+
+.App .body .users-list .user hr{
+    border: solid var(--user-border) 0.5px
+}
+
+.App .body .users-list .user p{
+    align-self: center;
+    word-break: break-all;
+    line-height: var(--p-height);
+    color: var(--text-p)
+}
+
+.App .body .users-list .user p .date{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.App .body .users-list .user .term{
+    display: block;
+    line-height: var(--span-height);
+    color: var(--text-span)
+}
+
+.App .body .users-list .user .btns{
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+}
+
+.App .body .users-list .user .btns button{
+    height: 43px;
+    width: 43px;
+    cursor: pointer;
+}
+
+.App .body .users-list .user .btns .delete{
+    background-color: var(--btn-delete-bk);
+    border: solid var(--btn-delete-border) 1px;
+    border-radius: 4px;
+}
+
+.App .body .users-list .user .btns .update{
+    background-color: var(--btn-edit-bk);
+    border: solid var(--btn-edit-border) 1px;
+    border-radius: 4px;
+}
+
+@media(max-width:800px) {
+    .App .body .users-list{
+        justify-content: center;
+    }
+}

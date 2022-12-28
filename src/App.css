@@ -1,0 +1,36 @@
+.App{
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.App header{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.App header h1{
+    place-self: center start;
+    font-size: var(--title-h1-height);
+    line-height: var(--title-h1-height);
+    color: var(--titles)
+}
+
+.App header button{
+    place-self: center end;
+    color: #fff;
+    background-color: var(--btn-create-bk);
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+@media(max-width: 500px) {
+    .App header{
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .App header button {
+        margin-bottom: 1.5rem;
+    }
+}

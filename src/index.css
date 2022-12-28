@@ -1,0 +1,49 @@
+:root{
+    /*font family */
+    --family-helvetica: "Helvetica";
+
+    /* color topography */
+    --titles: #0F0F2D;
+    --text-p: #302F2F;
+    --text-span: #D3D3D3;
+
+    /*color border*/
+    --user-border: #E5E5E5;
+    --btn-delete-border: #D93F3F;
+    --btn-edit-border: #BDBDBD;
+    --input-form-border: #C3C1C1;
+
+    /*backgrounds*/
+    --btn-delete-bk: #D85D5D;
+    --btn-edit-bk: #F6F6F6;
+    --btn-create-bk: #555A88;
+
+    /*font size*/
+    --title-h1-size: 2em;
+    --title-h2-size: 32px;
+    --title-h3-size: 25px;
+    --text-body-size: 16px;
+
+    /*line height*/
+    --title-h1-height: 61px;
+    --title-h3-height: 30px;
+    --title-h2-height: 39px;
+    --span-height: 18px;
+    --p-height: 19px;
+}
+
+html{
+    box-sizing: border-box;
+    font-family: var(--family-helvetica);
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit ;
+}
+body{
+    margin: 0; 
+    padding: 0;
+    font-size: var(--text-body-size);
+}

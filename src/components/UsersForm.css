@@ -1,0 +1,91 @@
+.App .body .user-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    backdrop-filter:  brightness(75%);
+    padding: 2rem;
+}
+
+.App .body .user-form .form-container{
+    position: relative;
+    flex-basis: 419px;
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.App .body .user-form .form-container .exit{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    right: 20px;
+}
+
+.App .body .user-form .form-container .exit::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 1px;
+    height: 20px;
+    background-color: #212121;
+    border: solid #212121 2px;
+    border-radius: 4px;
+    transform: rotate(45deg);
+}
+
+.App .body .user-form .form-container .exit::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 1px;
+    height: 20px;
+    background-color: #212121;
+    border: solid #212121 2px;
+    border-radius: 4px;
+    transform: rotate(-45deg);
+}
+
+.App .body .user-form .form-container .exit:hover{
+    cursor: pointer;
+}
+
+.App .body .user-form h2{
+    line-height: var(--title-h2-height);
+    font-size: var(--title-h2-size);
+    color: var(--titles)
+}
+
+.App .body .user-form form{
+    width: 100%;
+}
+
+.App .body .user-form form>*{
+    display: block;
+    line-height: var(--p-height);
+    font-size: var(--text-body-size);
+}
+
+.App .body .user-form form>input{
+    width: 80%;
+    border: solid var(--input-form-border) 1px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    margin-top: 8px;
+    padding: 10px 17px;
+}
+
+.App .body .user-form button{
+    width: 80%;
+    color: #fff;
+    background-color: var(--btn-create-bk);
+    border: none;
+    padding: 0.8rem;
+    cursor: pointer;
+}
